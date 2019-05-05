@@ -1,0 +1,118 @@
+<!doctype html>
+
+
+<html lang="en" dir="ltr"><head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | Good Food Mood</title>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+        <!-- HEADER---->
+    <header id="topHeader">
+
+      <div class="navbar">
+        <div class="header-logo">
+          <a title="Go to Home Page" href="index.html"><img class="logo" alt="Good Mood Food Written-Logo" src="../images/Asset 4.png"></a>
+        </div>
+
+        <!-- NAVmenu--->
+        <div id="menu">
+          <a title="View menu" id="drop" href="#"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+      <nav>
+        <ul id="navlist">
+          <li><a href="search.html" title="Go Search">RECIPES</a></li>
+          <li><a title="Go to Contact Us" href="#">CONTACT US</a></li>
+          <li><a title="Go to About" href="about.html">ABOUT</a></li>
+          <li class="social-links"><a class="social" href="https://www.youtube.com/" title="Go to GoodFoodMOOD on YouTube"><i class="fab fa-youtube"></i></a>
+          <a class="social" href="https://twitter.com/" title="Go to GoodFoodMOOD on Twitter"><i class="fab fa-twitter"></i></a>
+          <a class="social" href="https://www.instagram.com/" title="Go to GoodFoodMOOD on Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <!-- CONTACT US with javacript validation-->
+    <div class="contactpage">
+
+		
+		
+      <!-- contact form maybe PHP-->
+      <div class="contactform">
+        <form>
+          <h1>ANY QUESTIONS? | CONTACT US</h1>
+            <p>Have a burning question? Talk to a doctor. Have a passion for food? Talk to us.<br>
+           
+				
+		<i class="allfields">Please fill in all fields.</i></p>
+          <input type="text" name="firstName" id="firstName" placeholder="First name"><br>
+          <div class="error" id="firstNameError"><i class="fas fa-exclamation-triangle"></i>We need to be on a first name basis</div><br>
+          <input type="text" name="lastName" id="lastName" placeholder="Last name"><br>
+          <div class="error" id="lastNameError"><i class="fas fa-exclamation-triangle"></i>May we have your last name?</div><br>
+          <input type="text" name="email" id="email" placeholder="Email"><br>
+          <div class="error" id="emailError"><i class="fas fa-exclamation-triangle"></i>Need the email for love letters</div><br>
+          <textarea type="text" name="message" id="message" placeholder="Message"></textarea><br>
+          <div class="error" id="messageError"><i class="fas fa-exclamation-triangle"></i> Please tell us what we can do for you</div><br>
+          <a href="thanks.html" title="Get your mood" id="submitMessage" class="submit button" value="submit"><i class="fas fa-utensil-spoon"></i>SEND IT TO THE KITCHEN</a>
+        </form>
+		  
+		  <!--BACK TO TOP-->
+	  <a href="#" class="social"><em class="fas fa-arrow-circle-up"></em></a>
+      </div>
+    </div>
+    
+	  
+	    <!--THE SIGN ME for the goodness UP BUTTON -->
+ <button class="open-button" onclick="openForm()">SIGN ME UP | newsletter</button>
+
+<div class="form-popup" id="myForm">
+  <form action="thanks.html" class="form-container">
+    <h1><em class="fas fa-paper-plane"></em>SIGN ME UP | newsletter</h1>
+	  <p>Keep up to date with all of our most popular recipes, get inspiration and more...</p>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <button type="submit" class="btn" name="submit">SIGN ME UP</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+  
+	<!--END OF SIGN ME UP BUTTON-->
+	  
+	  
+	  
+	  
+	  
+	  
+
+   <!-- FOOTER -->
+      <footer>
+        <a title="GFM on YouTube" class="social" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        <a title="GFM on Twitter" class="social" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a title="GFM on Instagram" class="social" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <p class="copy">© 2019 GOOD FOOD MOOD</p>
+      </footer>
+
+
+    <!-- SCRIPTS--->
+    <script type="text/javascript" src="../script/api.js">
+    </script>
+    <script type="text/javascript" src="../js/menu.js">
+    </script>
+  </body>
+</html>

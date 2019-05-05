@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en" dir="ltr"><head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipe | Good Food Mood</title>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+  <!-- HEADER---->
+    <header id="topHeader">
+
+      <div class="navbar">
+        <div class="header-logo">
+          <a title="Go to Home Page" href="index.html"><img class="logo" alt="Good Mood Food Written-Logo" src="../images/Asset 4.png"></a>
+        </div>
+
+        <!-- NAVmenu--->
+        <div id="menu">
+          <a id="drop" href="#" title="View menu"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+      <nav>
+        <ul id="navlist">
+          <li><a href="#" title="Go Search">RECIPES</a></li>
+          <li><a title="Go to Contact Us" href="contact.html">CONTACT US</a></li>
+          <li><a href="about.html" title="Go to About">ABOUT</a></li>
+          <li class="social-links"><a class="social" href="https://www.youtube.com/" title="Go to GoodFoodMOOD on YouTube"><i class="fab fa-youtube"></i></a>
+          <a class="social" href="https://twitter.com/" title="Go to GoodFoodMOOD on Twitter"><i class="fab fa-twitter"></i></a>
+          <a class="social" href="https://www.instagram.com/" title="Go to GoodFoodMOOD on Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+
+    <!-- SEARCH BAR---->
+  <div class="homepage">
+		   <div class="intro">
+        <div class="article-text">
+          <h1>SEARCH FOR OVER 1.7 MILLION RECIPES</h1>
+          <p>Search our site for easy to follow recipes<br>tips and more!</p>
+			
+        </div>
+    </div>
+		  
+		  <!--Search all of this-->
+		<div class="col master">
+			<div class="card">
+				<a class="thumb" href="#"><img src="" alt="Image" /></a>
+				<h3><a href="#"></a></h3>
+				<ul class="meta">
+					<li><strong>5</strong> Ingredients</li>
+					<li><strong>100</strong> Calories</li>
+				</ul>
+				<p class="ingredients"></p>
+				<p class="source"><a href="#">Source</a></p>
+			</div><a title="Click here for the good stuff" class="button" href="recipe.html?id=" + "uri"><em class="fas fa-utensils"></em>SEE RECIPE</a>
+		</div>
+
+	  
+	  
+    <div class="searchbtn">
+		<form id="recipeSearch">
+			<input type="text" id="query" placeholder="Search for delicious recipes here..."/> <span id="error" class="error-text"></span> <br />
+			<input type="submit" value="Search" style="background:#ED6691" />
+			<p id="searchOutput"></p>
+		</form>
+		<div class="cols" id="recipes"></div>
+		  </div></div>
+	 
+
+	  
+	  
+	  
+	  
+
+	    <!--THE SIGN ME for the goodness UP BUTTON -->
+ <button class="open-button" onclick="openForm()">SIGN ME UP | newsletter</button>
+
+<div class="form-popup" id="myForm">
+  <form action="thanks.html" class="form-container">
+    <h1><em class="fas fa-paper-plane"></em>SIGN ME UP | newsletter</h1>
+	  <p>Keep up to date with all of our most popular recipes, get inspiration and more...</p>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <button type="submit" class="btn" name="submit">SIGN ME UP</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+  
+	<!--END OF SIGN ME UP BUTTON-->
+	  
+	  
+
+
+   
+       <!-- FOOTER--->
+      <footer>
+        <a title="GFM on YouTube" class="social" href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        <a title="GFM on Twitter" class="social" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a title="GFM on Instagram" class="social" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <p class="copy">© 2019 GOOD FOOD MOOD</p>
+      </footer>
+
+
+
+    <!-- SCRIPTS--->
+    <script type="text/javascript" src="../js/api.js">
+    </script>
+    <script type="text/javascript" src="../js/menu.js">
+    </script>
+  </body>
+</html>

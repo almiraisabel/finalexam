@@ -1,0 +1,971 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* FONT & MAIN */
+@import url("https://use.typekit.net/ecw8nqf.css");
+
+body {
+  font-family: "acumin-pro", sans-serif;
+  background-color: #191919;
+  color: #fff;
+  margin: 0;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+p {
+  font-weight: 100;
+}
+
+
+
+/* NAV */
+
+.navbar {
+  display: grid;
+  grid-template-columns: 50% 45% 5%;
+  grid-template-rows: 50px;
+  position: relative;
+  clear: both;
+  margin: 0;
+}
+
+.logo {
+  max-width: 60%;
+  margin-top: 18px;
+  margin-left: 30px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: end;
+}
+
+#menu {
+  display: block;
+  padding-top: 15px;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: end;
+  letter-spacing: 1px;
+  text-align: right;
+  position: relative;
+  clear: both;
+}
+
+.fa-bars {
+  margin-right: 5px;
+}
+
+#navlist {
+  list-style: none;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 300px;
+  display: none;
+}
+
+nav li {
+    display: block;
+    padding: 30px 0px;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:active {
+  color: orange;
+}
+
+.active {
+  color: #777;
+}
+
+.social-links {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  margin-left: -20px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+  #menu {
+    display: none;
+  }
+
+  #navlist, nav li {
+    display: inline;
+    float: right;
+    padding-left: 40px;
+    padding-top: 5px;
+    font-size: 0.7rem;
+  }
+
+  nav li a:hover {
+    color: orange;
+  }
+
+  #topHeader {
+    display: grid;
+    grid-template-columns: 50% 45% 5%;
+    grid-template-rows: 60px;
+    position: relative;
+    clear: both;
+    margin: 0;
+  }
+
+  #navlist {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: end;
+  }
+
+  .social-links {
+    display: none;
+  }
+
+}
+
+
+
+/* BTNS & LINKS */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button {
+  background-color: #ED6691;
+  padding: 15px 20px;
+  text-align: center;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  font-size: 0.7rem;
+}
+
+.button:hover {
+  background-color: #f90;
+}
+
+.button:active {
+  background-color: #f90;
+}
+
+.read-more {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+
+
+/* FOOTER + back to top */
+
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: #232323;
+  height: 100px;
+  text-align: center;
+  padding: 40px 10px;
+  color: #919191;
+}
+
+
+
+.social {
+  padding: 20px;
+  color: #ED6691;
+  font-size: 1.2rem;
+}
+
+.social:hover {
+  color: #f90;
+}
+
+.copy {
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-top: 30px;
+  font-size: 0.7rem;
+}
+
+
+
+
+/* POP-UP TAKEN FROM W3SCHOOLS AND THEN UTILIZED IN DIFF */
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #f90;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+ 
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f90;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #191919;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #191919;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #191919;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #f90 ;
+  color: #fff;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #414141;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+/* INDEX PAGE/HOME */
+
+.homepage {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 250px 950px 300px 300px 300px;
+}
+
+.homepage h2:hover {
+	color: #f90;
+	
+}
+
+.intro {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 10px 20px;
+  background-image: url(../images/index_intro.png);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.intro h1 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+}
+
+.yummy-preview {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 50px 20px;
+}
+
+.yummy-preview h2, a {
+   text-align: center;
+}
+
+.yummy-preview img {
+   width: 70%;
+}
+
+
+.cta {
+  text-align: center;
+}
+
+.introsearch {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-image: url(../images/smoothies-2253430_1280.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.introknowledge {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-image: url();
+  background-position: center;
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.lovefood {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  background-image: url(../images/chalk_marble_dull.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+
+
+/* MEDIA Q */
+@media only screen and (min-width: 300px) {
+  .intro {
+    padding: 10px 50px;
+  }
+
+  .introsearch, .introknowledge  {
+    display: none;
+  }
+.lovefood {
+    display: auto;
+  }
+}
+
+
+@media only screen and (min-width: 400px) {
+  .intro {
+    padding: 10px 50px;
+  }
+
+  .introsearch, .introknowledge {
+    display: none;
+  }
+
+  .yummy-preview {
+    padding: 50px 40px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .intro {
+    padding: 30px 100px;
+  }
+
+  .introsearch, .introknowledge {
+    padding: 60px 90px;
+  }
+
+  .yummy-preview {
+    padding: 50px 70px;
+  }
+
+  .logo {
+    max-width: 50%;
+  }
+}
+
+
+@media only screen and (min-width: 700px) {
+  .intro {
+    padding: 30px 200px;
+  }
+
+  .introsearch, .introknowledge {
+    padding: 60px 200px;
+  }
+
+  .yummy-preview {
+    padding: 50px 200px;
+  }
+
+  .logo {
+    max-width: 30%;
+    padding-bottom: 20px;
+  }
+}
+
+
+@media only screen and (min-width: 850px) {
+  .intro {
+    padding: 30px 250px;
+  }
+
+  .introsearch, .introknowledge {
+    padding: 70px 250px;
+  }
+
+  .logo {
+    max-width: 30%;
+    padding-bottom: 20px;
+  }
+
+}
+
+
+@media only screen and (min-width: 930px) {
+  .intro {
+    padding: 30px 300px;
+  }
+
+  .introsearch, .introknowledge, .lovefood {
+    padding: 70px 300px;
+  }
+
+  .yummy-preview {
+    padding: 50px 240px;
+  }
+
+  .logo {
+    max-width: 25%;
+    padding-bottom: 20px;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+  .homepage {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px 450px 400px 400px 400px;
+  }
+
+  .intro {
+    padding: 80px 300px;
+  }
+
+  .yummy-preview {
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: 80px 160px 50px;
+    padding: 50px 55px;
+  }
+	
+	.yummy-preview a:hover {
+		color: #f90;
+	}
+
+  .yummy-title {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+}
+
+  #yummy1 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border-bottom: none;
+    padding: 0px 30px;
+  }
+
+  #yummy2 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border-bottom: none;
+    padding: 0px 30px;
+  }
+
+  #yummy3 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding: 0px 30px;
+  }
+
+ 
+
+  .cta {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+
+ 
+
+  .intro, .introsearch, .introknowledge, .lovefood {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+    grid-template-rows: 400px;
+    padding: 100px 0px;
+  }
+
+  .article-text {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
+
+  .logo {
+    max-width: 40%;
+    padding-bottom: 20px;
+  }
+
+
+
+@media only screen and (min-width: 1300px) {
+  .yummy-preview {
+    display: grid;
+    grid-template-columns: 15% 23% 23% 23% 15%;
+    grid-template-rows: 80px 160px 50px;
+    padding: 50px 55px;
+  }
+
+  .logo {
+    max-width: 35%;
+    padding-bottom: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 1700px) {
+
+  .homepage {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 700px 450px 700px 700px 700px;
+  }
+
+  .intro, .introsearch, .introknowledge, .lovefood {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 400px;
+    padding: 250px 0px;
+  }
+
+  .yummy-preview {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 80px 160px 50px;
+    padding: 50px 55px;
+  }
+
+  .logo {
+    max-width: 30%;
+    padding-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+/* ALL ABOUT THE GOODNEESSS */
+.aboutpage {
+  display: grid;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+.goodfoodmood {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-image: url(../images/chalk_marble_dull_upper.jpg);
+  background-size: cover;
+  padding: 40px 0px;
+}
+
+.goodfoodmood, .apistuff {
+  display: grid;
+  grid-template-columns: 3% 94% 3%;
+}
+
+.about-text {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.thoughts {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 50px 30px;
+
+}
+
+.apistuff {
+  grid-column-start: 1;
+  grid-column-end: end;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 40px 30px;
+  background-image: url(../images/chalk_marble_dull_lower.jpg);
+  background-size: cover;
+}
+
+
+
+
+
+@media only screen and (min-width: 425px) {
+
+  .goodfoodmood, .apistuff, .cols{
+    grid-template-columns: 10% 80% 10%;
+    padding-top: 70px;
+  }
+
+
+
+@media only screen and (min-width: 540px) {
+
+  .goodfoodmood, .apistuff, .cols {
+    grid-template-columns: 20% 60% 20%;
+    padding-top: 70px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .goodfoodmood, .apistuff {
+    grid-template-columns: 30% 40% 30%;
+    padding-top: 70px;
+  }
+
+
+
+@media only screen and (min-width: 1024px) {
+
+  .aboutpage {
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+
+
+  .goodfoodmood, .apistuff {
+    grid-template-columns: 35% 30% 35%;
+    padding-top: 70px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+  
+
+  .goodfoodmood, .apistuff {
+    grid-template-columns: 35% 30% 35%;
+    padding-top: 70px;
+  }
+	}
+  
+
+@media only screen and (min-width: 1600px) {
+
+
+  .goodfoodmood, .apistuff {
+    grid-template-columns: 40% 20% 40%;
+    padding-top: 70px;
+	
+}
+	}
+
+/* API PAGE SEARCH PAGE*/
+	
+	
+	.searchbtn {
+		max-width: 100%;
+		align-content: center!important;
+		
+	}	
+
+.cols {overflow: hidden;}
+			.col {
+				min-width: 10%;
+				max-width: 30%;
+				float: left;
+	            display: table;
+			  
+	}
+
+			.card {
+				border: 1px solid #ED6691; 
+				margin: 5px; 
+				padding: 5px; 
+				border-radius: 5px; 
+				font-family: "acumin-pro", sans-serif;
+				padding-bottom: 3px;
+	}
+	
+			.card a {
+				text-decoration: none;
+	}
+			.card .thumb {
+				display: block;
+				border-radius: 5px; 
+				overflow: hidden; 
+				margin-bottom: 10px;}
+			.card .thumb img {
+				max-width: 80%; 
+				display: grid;
+	}
+			.card h3 {
+				margin: 0; 
+				line-height: 1; 
+				font-weight: 600;
+	}
+			.card h3 a {
+				color: #fff; 
+				display: block; 
+				padding: 5px 0;}
+			.card h3 a:hover {
+				color: #f90;
+	}
+			.card .meta {
+				margin: 10px 0; 
+				padding: 5px; 
+				text-align: center; 
+				border: 1px solid #ccc; 
+				border-width: 1px 0;}
+			.card .meta li {
+				list-style: none; 
+				display: inline-block; 
+				border-left: 2px solid #ccc; 
+				padding: 0 5px;}
+			.card .meta li:first-child {
+				border: 0;
+	}
+			.card .meta li strong {
+				background-color: #f90; 
+				padding: 0 5px; 
+				border-radius: 5px;}
+			.card .source {
+				margin: 0;
+	}
+			.error-text {
+				color: #f00; 
+				font-weight: 600;
+	}
+			.master {display: none;
+	}
+
+	
+	
+
+
+
+
+/* CONTACT US */
+
+.contactpage {
+ align-content:center;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 1300px;
+  padding-top: 40px;
+  background-image: url(../images/aroma-906137_1280.jpg);
+  background-size: cover;
+}
+
+.contactform {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: end;
+  width: 100%;
+  color: #191919;
+}
+
+.contactform p {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #000;
+	
+}
+
+
+input, textarea {
+  width: 100%;
+  padding: 12px 18px;
+  margin: 5px 0px;
+  box-sizing: border-box;
+  background-color: #262626;
+  color: #fff;
+  border: none;
+}
+
+textarea {
+  height: 200px;
+}
+
+::placeholder {
+  color: #bcbcbc;
+  opacity: 1;
+}
+
+.submit {
+  float: right;
+  margin-top: 0px;
+  background-color: #ED6691;
+}
+
+#firstNameError, #lastNameError, #emailError, #messageError {
+  color: red;
+  display: none;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.allfields {
+  font-size: 0.8em;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.thankyou {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 160px 500px;
+  text-align: center;
+}
+
+.sent {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 40px 20px 0px 20px;
+}
+
+.back {
+  margin-top: 20px;
+}
+
+
+@media only screen and (min-width: 290px) {
+  .thankyou {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 160px 700px;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .contactpage{
+    display: grid;
+    grid-template-columns: 20% 60% 40%;
+    grid-template-rows: 1300px;
+    padding-top: 40px;
+  }
+
+  .thankyou{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 160px 1000px;
+    text-align: center;
+  }
+
+}
+
+  @media only screen and (min-width: 1024px) {
+    .contactpage, .contactform {
+      display: grid;
+      grid-template-columns: 35% 30% 35%;
+      grid-template-rows: 1300px;
+      padding-top: 100px;
+    }
+
+    .thankyou {
+      display: grid;
+      grid-template-columns: 35% 30% 35%;
+      grid-template-rows: 160px 1000px;
+      text-align: center;
+    }
+
+  }
+
+    @media only screen and (min-width: 1600px) {
+      .contactpage {
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 1300px;
+        padding-top: 100px;
+      }
+
+      .thankyou {
+        display: grid;
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 160px 1000px;
+        text-align: center;
+      }
+		
+		
+
+    }
+
+
+	}}
